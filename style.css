@@ -1,0 +1,145 @@
+* {
+    /*Ajustando todo para que no hayga margenes*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cuadro-titulo {
+    display: flex; /*Coloca sus elementos en fila*/
+    background-color: burlywood;
+    position: fixed;
+    box-sizing: border-box; /*Evita que padding y borde no aumenten el tamaño real*/
+
+    align-items: center;
+    justify-content: space-between; /*Espacio automatico entre sus hijos*/
+
+    padding: 5px 20px;
+    gap: 1rem; /*Espacio entre los elementos hijos del flex (logo, título, iconos).*/
+
+    width: 100%;
+    height: auto;
+}
+.titulo {
+    flex: 1; /* ocupa espacio disponible */
+    text-align: center;
+
+    font-family: 'Itim', cursive;
+    font-size: clamp(1.2rem, 3vw, 2.5rem); /*clamp(valor-mínimo, valor-ideal, valor-máximo)*/
+    /* Usar rem y vw es recomendable ya que: ✔ rem → accesible y estable | ✔ vw → fluido y adaptable | ✔ límites → nunca se rompe
+    1rem = 16px
+    2rem = 32px
+    0.5rem = 8px
+
+    1vw = 1% del ancho de la pantalla*/
+
+    white-space: nowrap; /*Evita que el título salte a otra línea.*/
+}
+.logo img {
+    width: clamp(40px, 8vw, 80px);
+    height: auto;
+}
+
+.iconos {
+    display: flex;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.icono {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    cursor: pointer; /*Cambia el cursor a “mano” para indicar que se le puede hacer click*/
+}
+
+.cuerpo {
+    display: flex;
+    padding-top: clamp(70px, 14vh, 110px);
+    align-items: stretch;
+}
+
+.fondo {
+    width: 100%;
+    min-height: clamp(700px, 100vh, 1066px);
+
+    background-image: url(imagenes/Fondo2.jpeg);
+    background-size: cover; /*Cubre todo el contenedor | Puede recortar (lo correcto para fondos)*/
+    background-position: center; /*El recorte siempre es centrado*/
+    background-repeat: no-repeat;
+}
+
+.textos {
+    display: flex;
+    flex-direction:column;
+    width: 50%;
+    height: 100%;
+}
+.subtitulo {
+    padding-left: 20px;
+    color: white;
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+
+    font-family: "Agbalumo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(3.9rem, 9vw, 7.8rem);
+    text-align: center;
+}
+
+.presentacion {
+    padding-left: 20px;
+    color: white;
+    font-family: Times, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 4vw, 3.6rem);
+    flex-wrap: wrap;
+}
+
+.chompa-espacio {
+    width: 50%;
+    display: flex;
+}
+.chompa-espacio svg {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    .cuadro-titulo {
+        flex-wrap: wrap; /*Permite que sus elemento bajen de linea*/
+        justify-content: center; /*Permite que sus elementos se centren*/
+    }
+
+    .titulo {
+        order: 3;
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    .iconos {
+        order: 2;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .subtitulo {
+        text-align: center;
+    }
+
+    .textos {
+        width: 100%;
+    }
+    .cuerpo {
+        flex-wrap: wrap;
+    }
+    .chompa-espacio {
+        width: 100%;
+    }
+    .chompa-espacio svg {
+        height: 300px;
+    }
+}
