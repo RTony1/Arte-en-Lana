@@ -23,7 +23,16 @@
             <h1 class="titulo">ARTE EN LANA</h1>
 
             <div class="iconos">
-                <i class="fa-solid fa-magnifying-glass icono"></i>
+                <form>
+                    <input id="barra_busqueda" type="search" list="buscar" class="estilo-buscar" name="buscar">
+                    <datalist id="buscar">
+                        <option value="Chompas navideñas"></option>
+                        <option value="Chompas rayas"></option>
+                        <option value="Chompas shakiras"></option>
+                    </datalist>
+                </form>
+                <i class="fa-solid fa-xmark icono" id="equis" onclick="ocultarBarra()"></i>
+                <i class="fa-solid fa-magnifying-glass icono" id="lupa" onclick="mostrarBarra()"></i>
                 <i class="fa-regular fa-user icono"></i>
                 <i class="fa-solid fa-cart-shopping icono"></i>
             </div>
@@ -36,10 +45,105 @@
             </p>
         </div>
         <div class="chompa-espacio">
-            <svg>
-                <circle cx="50%" cy="50%" r="27%" fill="rgb(128,128,128)" />
+            <svg viewBox="0 0 100 100" class="circulo">
+                <defs>
+                    <clipPath id="clip-circulo">
+                        <circle cx="50" cy="50" r="28" />
+                    </clipPath>
+                </defs>
+
+                <!-- círculo de fondo -->
+                <circle cx="50" cy="50" r="30" fill="rgb(128,128,128)" />
+
+                <!-- imagen recortada -->
+                <image class="circulo-fondo"
+                    href="imagenes/chompaP.png"
+                    x="22"
+                    y="22"
+                    width="56"
+                    height="56"
+                    clip-path="url(#clip-circulo)"
+                    preserveAspectRatio="xMidYMid slice" />
             </svg>
         </div>
     </section>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
+    <h1>A</h1>
 </body>
+<script src="script.js"></script>
 </html>
