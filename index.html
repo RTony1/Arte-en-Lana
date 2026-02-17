@@ -17,7 +17,9 @@
 <body class="fondo">
     <header class="cuadro-titulo">
             <div class="logo">
-                <img src="imagenes/Logo_AeT.png" alt="Logo de Arte en Lana">
+                <a href="index.html">
+                    <img src="imagenes/Logo_AeT.png" alt="Logo de Arte en Lana">
+                </a>
             </div>
 
             <h1 class="titulo">ARTE EN LANA</h1>
@@ -31,119 +33,102 @@
                         <option value="Chompas shakiras"></option>
                     </datalist>
                 </form>
-                <i class="fa-solid fa-xmark icono" id="equis" onclick="ocultarBarra()"></i>
+                <i class="fa-solid fa-xmark icono" id="equis_barra" onclick="ocultarBarra()"></i>
                 <i class="fa-solid fa-magnifying-glass icono" id="lupa" onclick="mostrarBarra()"></i>
                 <i class="fa-regular fa-user icono"></i>
-                <i class="fa-solid fa-cart-shopping icono"></i>
+                <i class="fa-solid fa-cart-shopping icono" onclick="mostrarCarrito()"></i>
             </div>
     </header>
-    <section class="cuerpo">
-        <div class="textos">
-            <h1 class="subtitulo">Arte en Lana</h1>
-            <p class="presentacion">
-                Descubre nuestra colección de prendas de lana, tejidas con calidad.
-            </p>
-        </div>
-        <div class="chompa-espacio">
-            <svg viewBox="0 0 100 100" class="circulo">
-                <defs>
-                    <clipPath id="clip-circulo">
-                        <circle cx="50" cy="50" r="28" />
-                    </clipPath>
-                </defs>
-
-                <!-- círculo de fondo -->
-                <circle cx="50" cy="50" r="30" fill="rgb(128,128,128)" />
-
-                <!-- imagen recortada -->
-                <image class="circulo-fondo"
-                    href="imagenes/chompaP.png"
-                    x="22"
-                    y="22"
-                    width="56"
-                    height="56"
-                    clip-path="url(#clip-circulo)"
-                    preserveAspectRatio="xMidYMid slice" />
-            </svg>
+    <section class="carrito" id="carrito">
+        <div class="carrito-encabezado">
+            <p>Mi Carrito</p>
+            <i class="fa-solid fa-xmark icono" onclick="ocultarCarrito()"></i>
         </div>
     </section>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
-    <h1>A</h1>
+    <section class="cuerpo">
+            <div class="textos">
+                <h1 class="subtitulo">Arte en Lana</h1>
+                <p class="presentacion">
+                    Descubre nuestra colección de prendas de lana, tejidas con calidad.
+                </p>
+            </div>
+            <div class="chompa-espacio">
+                <svg viewBox="0 0 100 100" class="circulo">
+                    <defs>
+                        <clipPath id="clip-circulo">
+                            <circle cx="50" cy="50" r="28" />
+                        </clipPath>
+                    </defs>
+
+                    <!-- círculo de fondo -->
+                    <circle cx="50" cy="50" r="30" fill="rgb(128,128,128)" />
+
+                    <!-- imagen recortada -->
+                    <image class="circulo-fondo"
+                        href="imagenes/chompaP.png"
+                        x="22"
+                        y="22"
+                        width="56"
+                        height="56"
+                        clip-path="url(#clip-circulo)"
+                        preserveAspectRatio="xMidYMid slice" />
+                </svg>
+            </div>
+    </section>
+    <section class="seccion-cuadros">
+        <div class="cuadros-chompas">
+            <a class="chompa-imagen" href="compra.html">
+                <img src="imagenes/chompa1.png" alt="Chompa 1">
+            </a>
+            <p class="chompa-nombre">Chompa 1</p>
+            <p class="chompa-precio">S/20</p>
+            <a class="chompa-boton" href="compra.html">
+                <p>Añadir al carrito</p>
+            </a>
+            <a class="chompa-boton" href="compra.html">
+                <p>Personalizar</p>
+            </a>
+        </div>
+        <div class="cuadros-chompas">
+            <a class="chompa-imagen" href="compra.html">
+                <img src="imagenes/chompa1.png" alt="Chompa 2">
+            </a>
+            <p class="chompa-nombre">Chompa 2</p>
+            <p class="chompa-precio">S/20</p>
+            <a class="chompa-boton" href="compra.html">
+                <p>Añadir al carrito</p>
+            </a>
+            <a class="chompa-boton" href="compra.html">
+                <p>Personalizar</p>
+            </a>
+        </div>
+        <div class="cuadros-chompas">
+            <a class="chompa-imagen" href="compra.html">
+                <img src="imagenes/chompa1.png" alt="Chompa 3">
+            </a>
+            <p class="chompa-nombre">Chompa 3</p>
+            <p class="chompa-precio">S/20</p>
+            <a class="chompa-boton" href="compra.html">
+                <p>Añadir al carrito</p>
+            </a>
+            <a class="chompa-boton" href="compra.html">
+                <p>Personalizar</p>
+            </a>
+        </div>
+        <div class="cuadros-chompas">
+            <a class="chompa-imagen" href="compra.html">
+                <img src="imagenes/chompa1.png" alt="Chompa 4">
+            </a>
+            <p class="chompa-nombre">Chompa 4</p>
+            <p class="chompa-precio">S/20</p>
+            <a class="chompa-boton" href="compra.html">
+                <p>Añadir al carrito</p>
+            </a>
+            <a class="chompa-boton" href="compra.html">
+                <p>Personalizar</p>
+            </a>
+        </div>
+    </section>
 </body>
 <script src="script.js"></script>
 </html>

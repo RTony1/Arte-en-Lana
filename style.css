@@ -1,3 +1,4 @@
+/* Página index.html */
 * {
     /*Ajustando todo para que no hayga margenes*/
     margin: 0;
@@ -63,10 +64,42 @@
     border-radius: 10px;
 }
 
-
 .icono {
     font-size: clamp(1.2rem, 3vw, 2rem);
     cursor: pointer; /*Cambia el cursor a “mano” para indicar que se le puede hacer click*/
+}
+
+/* CARRITO */
+.carrito {
+    background-color: white;
+    height: 100%;
+    right: 0;
+    width: clamp(31.25rem, 42vw, 40rem);
+    position: fixed;
+    z-index: 1001;
+
+    /* Estado oculto */
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+/* Estado visible */
+.carrito.activo {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.carrito-encabezado {
+    display: flex;
+    margin: 1rem 2rem;
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+}
+.carrito-encabezado p {
+    font-family: 'Itim', cursive;
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
 }
 
 .cuerpo {
@@ -74,10 +107,9 @@
     padding-top: clamp(70px, 14vh, 110px);
     align-items: flex-start;
 }
-
 .textos {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     width: 53%;
     height: 100%;
 }
@@ -123,6 +155,279 @@
     cursor: pointer;
 }
 
+.seccion-cuadros {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem 5%;
+}
+
+.cuadros-chompas {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+
+    padding-bottom: 1rem;
+    
+    width: calc(50% - 4rem); /* 2 por fila */;
+    height: auto;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chompa-imagen{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-top: 5%;
+    width: 70%;
+}
+.chompa-imagen img {
+    width: 100%;
+    max-height: auto;
+}
+
+.chompa-nombre {
+    width: 100%;
+    padding: 0 2rem 0;
+    font-size: clamp(1.25rem, 1.7vw, 1.5rem);
+    font-family: 'Itim', cursive;
+    text-align: left;
+}
+
+.chompa-precio {
+    width: 100%;
+    font-size: clamp(1.25rem, 1.7vw, 1.5rem);
+    font-family: 'Itim', cursive;
+    text-align: left;
+    padding: 0 2rem 1rem;
+}
+
+.chompa-boton{
+    width: 90%;
+    height: clamp(3.25rem, 6.7vh, 3.75rem);
+    margin-bottom: 1rem;
+
+    background-color: gray;
+    border-radius: 1rem;
+    border: 1px solid black;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;      /* 👈 centra vertical */
+    justify-content: center;  /* 👈 centra horizontal */
+}
+.chompa-boton p {
+    color: white;
+    font-family: 'Itim', cursive;
+    font-size: clamp(1.5rem, 1.75vw, 1.75rem);
+}
+
+/* Página compra.html */
+.compra-fondo {
+    background-color: rgb(177, 177, 177);
+}
+
+.chompa-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+}
+
+.chompa-fotos {
+    width: 30%;
+}
+.chompa-foto {
+    width: 100%;
+    height: 30%;
+    margin: clamp(0.7rem, 1.5vh, 1rem) 0;
+
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chompa-foto img {
+    padding-top: 5%;
+    width: 70%;
+    height: auto;
+}
+
+.chompa-fotoP {
+    margin: 5%;
+    width: 60%;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chompa-fotoP img {
+    padding: auto;
+    width: 80%;
+    height: auto;
+}
+
+.chompa-detalles-envios {
+    width: 100%;
+    height: 100px;
+    background-color: #23722F;
+}
+
+.chompa-compra {
+    width: 45%;
+    height: auto;
+    background-color: white;
+    padding: 1rem 2rem;
+}
+.chompa-info {
+    border-bottom: 1px solid gray;
+}
+.compra-nombre {
+    font-family: 'Itim', cursive;
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+}
+.compra-precio {
+    font-family: 'Itim', cursive;
+    font-size: clamp(1.75rem, 2vw, 2rem);
+}
+
+.chompa-descripcion p {
+    font-family: 'Itim', cursive;
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+}
+
+.compra-grupos {
+    display: flex;
+    margin: 0.5rem 0;
+    width: 100%;
+    height: auto;
+}
+.grupos {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+.talla {
+    width: clamp(2rem, 2.6vw, 2.5rem);
+    height: clamp(2rem, 4.5vh, 2.5rem);
+    margin: 0 8px;
+
+    background-color: white;
+    border: 1px solid rgb(132, 132, 132);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.talla-seleccionada {
+    cursor: default;
+    border: 1px solid black;
+}
+.talla p {
+    color: rgb(132, 132, 132);
+    user-select: none;
+}
+.talla p.seleccionada {
+    color: rgb(0, 0, 0);
+}
+
+.color {
+    width: auto;
+    height: 2.5rem;
+    margin: 0.3rem clamp(0.2rem, 1vw, 0.5rem);
+    padding: 0 clamp(0.5rem, 0.7vw, 0.7rem);
+
+    background-color: white;
+    border: 1px solid rgb(132, 132, 132);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.color-seleccionado {
+    cursor: default;
+    border: 1px solid black;
+}
+.color p {
+    color: rgb(132, 132, 132);
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    user-select: none;
+}
+.color p.seleccionado {
+    color: rgb(0, 0, 0);
+}
+
+/* Cantidad */
+.cantidad {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+}
+.cantidad p {
+    user-select: none;
+}
+.cantidad-izquierda, .cantidad-derecha {
+    display: flex;
+    width: 2rem;
+    height: 2.5rem;
+
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bloque-cantidad {
+    width: auto;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+.bloque-cantidad p {
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+}
+.minimo p, .maximo p {
+    color: rgb(132, 132, 132);
+}
+
+/* Añadir al carrito y Realizar compra */
+.agregar-al-carrito, .realizar-compra {
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 0.5rem 0;
+    padding: 1rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.realizar-compra {
+    background-color: #23722F;
+}
+.realizar-compra p {
+    color: white;
+}
+
 @keyframes pulso {
     0% {
         transform: scale(0.9);
@@ -142,6 +447,10 @@
     .cuadro-titulo {
         flex-wrap: wrap; /*Permite que sus elemento bajen de linea*/
         justify-content: center; /*Permite que sus elementos se centren*/
+    }
+
+    .carrito {
+        width: clamp(18.75rem, 70vw, 26.25rem);
     }
 
     .titulo {
@@ -177,6 +486,31 @@
         width: 100%;
     }
     .chompa-espacio svg {
-        height: 300px;
+        height: 400px;
+    }
+    .cuadros-chompas {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .chompa-nombre {
+        font-size: clamp(1.125rem, 3.6vw, 1.25rem);
+        padding: 0 1rem 0;
+    }
+    .chompa-precio {
+        font-size: clamp(1.125rem, 3.6vw, 1.25rem);
+        padding: 0 1rem 1rem;
+    }
+    .chompa-boton p {
+        font-size: clamp(1.25rem, 4.2vw, 1.5rem)
+    }
+    .chompa-galeria {
+        width: 100%;
+    }
+    .chompa-foto {
+        margin: 0.5rem 0;
+    }
+    .chompa-compra {
+        width: 100%;
     }
 }

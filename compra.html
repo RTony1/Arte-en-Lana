@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <script src="https://kit.fontawesome.com/35917ce4e3.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <title>Compra</title>
+</head>
+<body class="compra-fondo">
+    <header class="cuadro-titulo">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo_AeT.png" alt="Logo de Arte en Lana">
+                </a>
+            </div>
+
+            <h1 class="titulo">ARTE EN LANA</h1>
+
+            <div class="iconos">
+                <form>
+                    <input id="barra_busqueda" type="search" list="buscar" class="estilo-buscar" name="buscar">
+                    <datalist id="buscar">
+                        <option value="Chompas navideñas"></option>
+                        <option value="Chompas rayas"></option>
+                        <option value="Chompas shakiras"></option>
+                    </datalist>
+                </form>
+                <i class="fa-solid fa-xmark icono" id="equis_barra" onclick="ocultarBarra()"></i>
+                <i class="fa-solid fa-magnifying-glass icono" id="lupa" onclick="mostrarBarra()"></i>
+                <i class="fa-regular fa-user icono"></i>
+                <i class="fa-solid fa-cart-shopping icono" onclick="mostrarCarrito()"></i>
+            </div>
+    </header>
+    <section class="carrito" id="carrito">
+        <div class="carrito-encabezado">
+            <p>Mi Carrito</p>
+            <i class="fa-solid fa-xmark icono" onclick="ocultarCarrito()"></i>
+        </div>
+    </section>
+    <section class="cuerpo">
+        <div class="chompa-galeria">
+            <div class="chompa-fotos">
+                <div class="chompa-foto">
+                    <img src="imagenes/chompa1.png">
+                </div>
+                <div class="chompa-foto">
+                    <img src="imagenes/chompa1.png">
+                </div>
+                <div class="chompa-foto">
+                    <img src="imagenes/chompa1.png">
+                </div>
+            </div>
+            <div class="chompa-fotoP">
+                <img src="imagenes/chompa1.png">
+            </div>
+            <div class="chompa-detalles-envios">
+
+            </div>
+        </div>
+        <div class="chompa-compra">
+            <section class="chompa-info">
+                <p class="compra-nombre">Chompa navideña</p>
+                <p class="compra-precio">S/20.00</p>
+            </section>
+            <section class="chompa-descripcion">
+                <p>Descripción:</p>
+                <p>Chompa navideña de color rojo</p>
+                <br>
+                <p>Talla:</p>
+                <!-- Tallas -->
+                <section class="compra-grupos">
+                    <!-- Talla Seleccionada 1 -->
+                    <section id="grupo_talla1" class="grupos">
+                        <div class="talla talla-seleccionada" data-talla="S">
+                            <p class="seleccionada">S</p>
+                        </div>
+                        <div class="talla" data-talla="P">
+                            <p>P</p>
+                        </div>
+                        <div class="talla" data-talla="M">
+                            <P>M</P>
+                        </div>
+                        <div class="talla" data-talla="G">
+                            <P>G</P>
+                        </div>
+                    </section>
+                    <!-- Talla Seleccionada 2 -->
+                    <section id="grupo_talla2" class="grupos">
+                        <div class="talla" data-talla="S">
+                            <p>S</p>
+                        </div>
+                        <div class="talla talla-seleccionada" data-talla="P">
+                            <p class="seleccionada">P</p>
+                        </div>
+                        <div class="talla" data-talla="M">
+                            <P>M</P>
+                        </div>
+                        <div class="talla" data-talla="G">
+                            <P>G</P>
+                        </div>
+                    </section>
+                    <!-- Talla Seleccionada 3 -->
+                    <section id="grupo_talla3" class="grupos">
+                        <div class="talla" data-talla="S">
+                            <p>S</p>
+                        </div>
+                        <div class="talla" data-talla="P">
+                            <p>P</p>
+                        </div>
+                        <div class="talla talla-seleccionada" data-talla="M">
+                            <P class="seleccionada">M</P>
+                        </div>
+                        <div class="talla" data-talla="G">
+                            <P>G</P>
+                        </div>
+                    </section>
+                    <!-- Talla Seleccionada 4 -->
+                    <section id="grupo_talla4" class="grupos">
+                        <div class="talla" data-talla="S">
+                            <p>S</p>
+                        </div>
+                        <div class="talla" data-talla="P">
+                            <p>P</p>
+                        </div>
+                        <div class="talla" data-talla="M">
+                            <P>M</P>
+                        </div>
+                        <div class="talla talla-seleccionada" data-talla="G">
+                            <P class="seleccionada">G</P>
+                        </div>
+                    </section>
+                </section>
+                <p>Color:</p>
+                <!-- Colores -->
+                <section class="compra-grupos">
+                    <!-- Color Seleccionado 1 -->
+                    <section id="grupo_color1" class="grupos">
+                        <div class="color color-seleccionado" data-color="Amarillo">
+                            <p class="seleccionado">Amarillo</p>
+                        </div>
+                        <div class="color" data-color="Verde">
+                            <p>Verde</p>
+                        </div>
+                        <div class="color" data-color="Rojo">
+                            <P>Rojo</P>
+                        </div>
+                        <div class="color" data-color="Azul">
+                            <P>Azul</P>
+                        </div>
+                    </section>
+                    <!-- Color Seleccionado 2 -->
+                    <section id="grupo_color2" class="grupos">
+                        <div class="color" data-color="Amarillo">
+                            <p>Amarillo</p>
+                        </div>
+                        <div class="color color-seleccionado" data-color="Verde">
+                            <p class="seleccionado">Verde</p>
+                        </div>
+                        <div class="color" data-color="Rojo">
+                            <P>Rojo</P>
+                        </div>
+                        <div class="color" data-color="Azul">
+                            <P>Azul</P>
+                        </div>
+                    </section>
+                    <!-- Color Seleccionado 3 -->
+                    <section id="grupo_color3" class="grupos">
+                        <div class="color" data-color="Amarillo">
+                            <p>Amarillo</p>
+                        </div>
+                        <div class="color" data-color="Verde">
+                            <p>Verde</p>
+                        </div>
+                        <div class="color color-seleccionado" data-color="Rojo">
+                            <P class="seleccionado">Rojo</P>
+                        </div>
+                        <div class="color" data-color="Azul">
+                            <P>Azul</P>
+                        </div>
+                    </section>
+                    <!-- Color Seleccionado 4 -->
+                    <section id="grupo_color4" class="grupos">
+                        <div class="color" data-color="Amarillo">
+                            <p>Amarillo</p>
+                        </div>
+                        <div class="color" data-color="Verde">
+                            <p>Verde</p>
+                        </div>
+                        <div class="color" data-color="Rojo">
+                            <P>Rojo</P>
+                        </div>
+                        <div class="color color-seleccionado" data-color="Azul">
+                            <P class="seleccionado">Azul</P>
+                        </div>
+                    </section>
+                </section>
+                <!-- Cantidad -->
+                <p>Cantidad:</p>
+                <section class="compra-grupos">
+                    <!-- Numeros -->
+                    <section class="cantidad" data-min="1" data-max="10">
+                        <div class="cantidad-izquierda minimo">
+                            <p>-</p>
+                        </div>
+
+                        <div class="bloque-cantidad">
+                            <p class="cantidad-valor">1</p>
+                        </div>
+
+                        <div class="cantidad-derecha maximo">
+                            <p>+</p>
+                        </div>
+                    </section>
+                </section>
+                <!-- Añadir al carrito -->
+                <section class="compra-grupos">
+                    <div class="agregar-al-carrito">
+                        <p>AÑADIR AL CARRITO</p>
+                    </div>
+                </section>
+                <!-- Realizar Compra -->
+                <section>
+                    <div class="realizar-compra">
+                        <p>REALIZAR COMPRA</p>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
