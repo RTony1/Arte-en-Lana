@@ -2,16 +2,24 @@
 let barra_busqueda = document.getElementById("barra_busqueda");
 barra_busqueda.style.display = "none";
 
+let titulo = document.getElementById("titulo");
+
 let equis = document.getElementById("equis_barra");
 equis_barra.style.display = "none";
 
 let lupa = document.getElementById("lupa");
+
+const mobileP = window.matchMedia("(max-width: 500px)");
 
 function mostrarBarra(){
     if (barra_busqueda.style.display == "none"){
         barra_busqueda.style.display = "block";
         lupa.style.display = "none";
         equis_barra.style.display = "block";
+        
+        if (mobileP.matches) {
+            titulo.style.display = "none";
+        }
     }
 };
 
@@ -20,6 +28,8 @@ function ocultarBarra(){
         barra_busqueda.style.display = "none";
         equis_barra.style.display = "none";
         lupa.style.display = "block";
+
+        titulo.style.display = "block";
     }
 };
 
