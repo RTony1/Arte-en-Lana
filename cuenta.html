@@ -12,9 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 
-    <title>Arte en Lana</title>
+    <title>Cuenta</title>
 </head>
-<body class="fondo">
+<body class="cuenta-fondo">
     <header class="cuadro-titulo">
         <div class="logo">
             <a href="index.html">
@@ -53,37 +53,33 @@
             <button id="carrito-pagar">Pagar</button>
         </div>
     </section>
-    <section class="cuerpo">
-            <div class="textos">
-                <h1 class="subtitulo">Arte en Lana</h1>
-                <p class="presentacion">
-                    Descubre nuestra colección de prendas de lana, tejidas con calidad.
-                </p>
-            </div>
-            <div class="chompa-espacio">
-                <svg viewBox="0 0 100 100" class="circulo">
-                    <defs>
-                        <clipPath id="clip-circulo">
-                            <circle cx="50" cy="50" r="28" />
-                        </clipPath>
-                    </defs>
+    <section class="cuadro-inicio-sesion">
+        <div class="inicio-sesion">
+            <h2>Iniciar sesión</h2>
+            <p>Escribe tu correo electrónico y contraseña para iniciar sesión:</p>
 
-                    <!-- círculo de fondo -->
-                    <circle cx="50" cy="50" r="30" fill="rgb(128,128,128)" />
-
-                    <!-- imagen recortada -->
-                    <image class="circulo-fondo"
-                        href="imagenes/chompaP.png"
-                        x="22"
-                        y="22"
-                        width="56"
-                        height="56"
-                        clip-path="url(#clip-circulo)"
-                        preserveAspectRatio="xMidYMid slice" />
-                </svg>
+            <input type="email" placeholder="Correo electrónico">
+            <div class="campo-input">
+                <input type="password" id="password" placeholder="Contraseña" onclick="desaparecer()">
+                <p id="olvido-contraseña">¿Olvidaste la contraseña?</p>
             </div>
+
+            <div class="boton-inicio-sesion">
+                <p>INICIAR SESIÓN</p>
+            </div>
+        </div>
+        <!-- Recuperar contraseña -->
+        <div class="recuperar-contrasena" id="recuperar_contrasena">
+            <h2>Recuperar Contraseña</h2>
+            <p>Escribe tu correo electrónico para recuperar la contraseña:</p>
+            
+            <input type="email" placeholder="Correo electrónico">
+
+            <div class="boton-inicio-sesion">
+                <p>RECUPERAR</p>
+            </div>
+        </div>
     </section>
-    <section class="seccion-cuadros" id="lista-chompas"></section>
     <section class="cuadro-servicio-al-cliente">
         <!-- Servicio al cliente -->
         <div class="servicio-al-cliente">

@@ -12,201 +12,105 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+
     <title>Compra</title>
 </head>
 <body class="compra-fondo">
     <header class="cuadro-titulo">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="imagenes/Logo_AeT.png" alt="Logo de Arte en Lana">
-                </a>
-            </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagenes/Logo_AeT.png" alt="Logo de Arte en Lana">
+            </a>
+        </div>
 
-            <h1 class="titulo" id="titulo">ARTE EN LANA</h1>
+        <h1 class="titulo" id="titulo">ARTE EN LANA</h1>
 
-            <div class="iconos">
-                <form>
-                    <input id="barra_busqueda" type="search" list="buscar" class="estilo-buscar" name="buscar">
-                    <datalist id="buscar">
-                        <option value="Chompas navideñas"></option>
-                        <option value="Chompas rayas"></option>
-                        <option value="Chompas shakiras"></option>
-                    </datalist>
-                </form>
-                <i class="fa-solid fa-xmark icono" id="equis_barra" onclick="ocultarBarra()"></i>
-                <i class="fa-solid fa-magnifying-glass icono" id="lupa" onclick="mostrarBarra()"></i>
+        <div class="iconos">
+            <form>
+                <input id="barra_busqueda" type="search" list="buscar" class="estilo-buscar" name="buscar">
+                <datalist id="buscar">
+                    <option value="Chompas navideñas"></option>
+                    <option value="Chompas rayas"></option>
+                    <option value="Chompas shakiras"></option>
+                </datalist>
+            </form>
+            <i class="fa-solid fa-xmark icono" id="equis_barra" onclick="ocultarBarra()"></i>
+            <i class="fa-solid fa-magnifying-glass icono" id="lupa" onclick="mostrarBarra()"></i>
+            <a href="cuenta.html">
                 <i class="fa-regular fa-user icono"></i>
-                <i class="fa-solid fa-cart-shopping icono" onclick="mostrarCarrito()"></i>
-            </div>
+            </a>
+            <i class="fa-solid fa-cart-shopping icono" onclick="mostrarCarrito()"></i>
+        </div>
     </header>
     <section class="carrito" id="carrito">
         <div class="carrito-encabezado">
             <p>Mi Carrito</p>
             <i class="fa-solid fa-xmark icono" onclick="ocultarCarrito()"></i>
         </div>
+        <div id="carrito-productos"></div>
+        
+        <div class="carrito-footer">
+            <p id="carrito-total"></p>
+            <button id="carrito-pagar">Pagar</button>
+        </div>
     </section>
     <section class="cuerpo">
         <div class="chompa-galeria">
-            <div class="chompa-fotos">
-                <div class="chompa-foto">
-                    <img src="imagenes/chompa1.png">
-                </div>
-                <div class="chompa-foto">
-                    <img src="imagenes/chompa1.png">
-                </div>
-                <div class="chompa-foto">
-                    <img src="imagenes/chompa1.png">
-                </div>
-            </div>
-            <div class="chompa-fotoP">
-                <img src="imagenes/chompa1.png">
+            <div class="chompa-fotos" id="fotos"></div>
+            <div class="chompa-fotoP" id="fotoP">
+              <img id="imagen-principal">
             </div>
             <div class="chompa-detalles-envios">
-
+                <!-- Detalles del producto -->
+                <div class="detalles-envios-bloques">
+                    <div class="detalles-envios-bloques-contenedor" id="toggle-detalles">
+                        <p class="detalles-envios-bloques-texto">DETALLES DE PRODUCTO</p>
+                        <p class="detalles-envios-bloques-despliegue" id="icono-detalles">+</p>
+                    </div>
+                    <div class="detalles-envios-bloques-contenido" id="detalles">
+                        <p>
+                            Detalles del producto aquí...
+                            <br>aaaaaa
+                            <br>a
+                        </p>
+                    </div>
+                </div>
+                <!-- Envios y devoluciones -->
+                <div class="detalles-envios-bloques">
+                    <div class="detalles-envios-bloques-contenedor" id="toggle-envios">
+                        <p class="detalles-envios-bloques-texto">ENVIOS Y DEVOLUCIONES</p>
+                        <p class="detalles-envios-bloques-despliegue" id="icono-envios">+</p>
+                    </div>
+                    <div class="detalles-envios-bloques-contenido" id="envios">
+                        <p>
+                            Envio y Devolucion...
+                            <br>Aqui se mostrara los envios y devoluciones pronto...
+                            <br>a
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="chompa-compra">
+        <div class="chompa-compra" id="chompa-compra">
             <section class="chompa-info">
                 <p class="compra-nombre">Chompa navideña</p>
                 <p class="compra-precio">S/20.00</p>
             </section>
             <section class="chompa-descripcion">
                 <p>Descripción:</p>
-                <p>Chompa navideña de color rojo</p>
+                <p class="descripcion">Chompa navideña de color rojo</p>
                 <br>
                 <p>Talla:</p>
                 <!-- Tallas -->
-                <section class="compra-grupos">
-                    <!-- Talla Seleccionada 1 -->
-                    <section id="grupo_talla1" class="grupos">
-                        <div class="talla talla-seleccionada" data-talla="S">
-                            <p class="seleccionada">S</p>
-                        </div>
-                        <div class="talla" data-talla="P">
-                            <p>P</p>
-                        </div>
-                        <div class="talla" data-talla="M">
-                            <P>M</P>
-                        </div>
-                        <div class="talla" data-talla="G">
-                            <P>G</P>
-                        </div>
-                    </section>
-                    <!-- Talla Seleccionada 2 -->
-                    <section id="grupo_talla2" class="grupos">
-                        <div class="talla" data-talla="S">
-                            <p>S</p>
-                        </div>
-                        <div class="talla talla-seleccionada" data-talla="P">
-                            <p class="seleccionada">P</p>
-                        </div>
-                        <div class="talla" data-talla="M">
-                            <P>M</P>
-                        </div>
-                        <div class="talla" data-talla="G">
-                            <P>G</P>
-                        </div>
-                    </section>
-                    <!-- Talla Seleccionada 3 -->
-                    <section id="grupo_talla3" class="grupos">
-                        <div class="talla" data-talla="S">
-                            <p>S</p>
-                        </div>
-                        <div class="talla" data-talla="P">
-                            <p>P</p>
-                        </div>
-                        <div class="talla talla-seleccionada" data-talla="M">
-                            <P class="seleccionada">M</P>
-                        </div>
-                        <div class="talla" data-talla="G">
-                            <P>G</P>
-                        </div>
-                    </section>
-                    <!-- Talla Seleccionada 4 -->
-                    <section id="grupo_talla4" class="grupos">
-                        <div class="talla" data-talla="S">
-                            <p>S</p>
-                        </div>
-                        <div class="talla" data-talla="P">
-                            <p>P</p>
-                        </div>
-                        <div class="talla" data-talla="M">
-                            <P>M</P>
-                        </div>
-                        <div class="talla talla-seleccionada" data-talla="G">
-                            <P class="seleccionada">G</P>
-                        </div>
-                    </section>
-                </section>
+                <section class="tallas"></section>
                 <p>Color:</p>
                 <!-- Colores -->
-                <section class="compra-grupos">
-                    <!-- Color Seleccionado 1 -->
-                    <section id="grupo_color1" class="grupos">
-                        <div class="color color-seleccionado" data-color="Amarillo">
-                            <p class="seleccionado">Amarillo</p>
-                        </div>
-                        <div class="color" data-color="Verde">
-                            <p>Verde</p>
-                        </div>
-                        <div class="color" data-color="Rojo">
-                            <P>Rojo</P>
-                        </div>
-                        <div class="color" data-color="Azul">
-                            <P>Azul</P>
-                        </div>
-                    </section>
-                    <!-- Color Seleccionado 2 -->
-                    <section id="grupo_color2" class="grupos">
-                        <div class="color" data-color="Amarillo">
-                            <p>Amarillo</p>
-                        </div>
-                        <div class="color color-seleccionado" data-color="Verde">
-                            <p class="seleccionado">Verde</p>
-                        </div>
-                        <div class="color" data-color="Rojo">
-                            <P>Rojo</P>
-                        </div>
-                        <div class="color" data-color="Azul">
-                            <P>Azul</P>
-                        </div>
-                    </section>
-                    <!-- Color Seleccionado 3 -->
-                    <section id="grupo_color3" class="grupos">
-                        <div class="color" data-color="Amarillo">
-                            <p>Amarillo</p>
-                        </div>
-                        <div class="color" data-color="Verde">
-                            <p>Verde</p>
-                        </div>
-                        <div class="color color-seleccionado" data-color="Rojo">
-                            <P class="seleccionado">Rojo</P>
-                        </div>
-                        <div class="color" data-color="Azul">
-                            <P>Azul</P>
-                        </div>
-                    </section>
-                    <!-- Color Seleccionado 4 -->
-                    <section id="grupo_color4" class="grupos">
-                        <div class="color" data-color="Amarillo">
-                            <p>Amarillo</p>
-                        </div>
-                        <div class="color" data-color="Verde">
-                            <p>Verde</p>
-                        </div>
-                        <div class="color" data-color="Rojo">
-                            <P>Rojo</P>
-                        </div>
-                        <div class="color color-seleccionado" data-color="Azul">
-                            <P class="seleccionado">Azul</P>
-                        </div>
-                    </section>
-                </section>
+                <section class="colores"></section>
                 <!-- Cantidad -->
                 <p>Cantidad:</p>
-                <section class="compra-grupos">
+                <section class="cantidades">
                     <!-- Numeros -->
-                    <section class="cantidad" data-min="1" data-max="10">
+                    <section class="cantidad" data-min="1">
                         <div class="cantidad-izquierda minimo">
                             <p>-</p>
                         </div>
@@ -219,6 +123,7 @@
                             <p>+</p>
                         </div>
                     </section>
+                    <p class="agotado">Producto agotado</p>
                 </section>
                 <!-- Añadir al carrito -->
                 <section class="compra-grupos">
@@ -233,6 +138,27 @@
                     </div>
                 </section>
             </section>
+        </div>
+    </section>
+    <section class="cuadro-servicio-al-cliente">
+        <!-- Servicio al cliente -->
+        <div class="servicio-al-cliente">
+            <p><b>SERVICIO AL CLIENTE</b></p>
+            <a>Terminos y servicios</a>
+            <a>Política de privacidad</a>
+            <a>Cambios y Devoluciones</a>
+            <a>Libro de reclamaciones</a>
+            <a>Contáctanos</a>
+            <a>Legales Promocionales</a>
+            <a>Política de ventas y envíos</a>
+        </div>
+        <!-- Comunidad -->
+        <div class="comunidad">
+            <p><b>COMUNIDAD</b></p>
+            <a>Cuidados para tu prenda</a>
+            <a>FAQS</a>
+            <a>Blog</a>
+            <a>Guía de tallas</a>
         </div>
     </section>
 </body>
